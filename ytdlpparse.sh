@@ -47,11 +47,6 @@ if [[ "$1" = "-v" ]] || [[ "$1" = "--version" ]]; then
     exit_success;
 fi
 
-#type yt-dlp >/dev/null 2>&1
-#if [[ "$?" -ne "0" ]]; then
-#    die "yt-dlp is not installed or not available on PATH.";
-#fi
-
 type yt-dlp >/dev/null 2>&1 || die "yt-dlp is not installed or is not available on PATH.";
 
 if ! [ -f "$1" ]; then
