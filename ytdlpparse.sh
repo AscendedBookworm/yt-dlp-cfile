@@ -2,6 +2,9 @@
 
 #Parse a list of URLs for yt-dlp with any command switches passed beforehand. 
 VERSION="0.1.0"
+#Time in seconds to sleep between downloads. Change this to suit yourself, but be aware that
+#downloads happening in too quick of succession might trigger anti-abuse mechanisms on some sites.
+SLEEP_TIME=30
 
 die()
 {
@@ -66,6 +69,7 @@ while read -r LINE || [ -n "${LINE}" ]; do
         COMMAND="yt-dlp ${LINE}";
         $(echo ${COMMAND});
 #        echo "${COMMAND}";
+        sleep "${SLEEP_TIME}";
     fi
 done < "$1"
 
