@@ -5,7 +5,7 @@ VERSION="0.1.0"
 
 die()
 {
-    printf "%s\n" "$1";
+    printf "%s\n" "$1" >&2;
     exit_failure "1";
 }
 
