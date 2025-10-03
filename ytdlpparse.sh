@@ -64,8 +64,8 @@ while read -r LINE || [ -n "${LINE}" ]; do
 
     if ! [ "${firstchar}" = "#" ] && [[ $LINE = *[^[:space:]]* ]]; then
         COMMAND="yt-dlp ${LINE}";
-#        $(echo ${COMMAND});
-        echo "${COMMAND}";
+        $(echo ${COMMAND});
+#        echo "${COMMAND}";
     fi
 done < "$1"
 

@@ -1,0 +1,9 @@
+#Lines starting with a pound/hash character are considered comments and ignored.
+#Blank and whitespace-only lines are also ignored.
+
+
+#This URL will be downloaded using the system standard configuration.
+https://www.example.com/abc
+
+#This URL will be downloaded with format 18.
+-f 18 https://www.example.com/xyz
