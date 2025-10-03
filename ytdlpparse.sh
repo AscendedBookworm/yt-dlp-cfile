@@ -62,9 +62,10 @@ fi
 while read -r LINE || [ -n "${LINE}" ]; do
     firstchar="${LINE:0:1}"
 
-    if ! [[ "${firstchar}" = "#" ]]; then
+    if ! [ "${firstchar}" = "#" ] && [[ $LINE = *[^[:space:]]* ]]; then
         COMMAND="yt-dlp ${LINE}";
-        $(echo ${COMMAND});
+#        $(echo ${COMMAND});
+        echo "${COMMAND}";
     fi
 done < "$1"
 
