@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Parse a list of URLs for yt-dlp with any command switches passed beforehand. 
-VERSION="0.1.0"
+VERSION="0.5.0"
 #Time in seconds to sleep between downloads. Change this to suit yourself, but be aware that
 #downloads happening in too quick of succession might trigger anti-abuse mechanisms on some sites.
 SLEEP_TIME=30
